@@ -1,7 +1,50 @@
 @import "../colors.scss";
 
+$navSize: 60px;
+
 nav {
   background-color: $main-color;
-  min-height: 64px;
+  min-height: $navSize;
   color: $nav-text-color;
+  svg {
+    margin: auto;
+  }
+  .notification-wrapper {
+    width: 100%;
+    cursor: pointer;
+  }
+  .notifications-count {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: white;
+    color: #fe5000;
+    text-align: center;
+    border-radius: 50px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    line-height: 20px;
+    font-weight: 600;
+    border: 2px solid;
+    font-size: 12px;
+    transition: all 0.2s ease-in-out;
+  }
+  .notification-actions {
+    width: $navSize;
+    height: $navSize;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover, &.active {
+      background: white;
+      svg {
+        fill: $main-color
+      }
+      .notifications-count {
+        color: white;
+        background: $main-color;
+      }
+    }
+  }
 }

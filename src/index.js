@@ -6,12 +6,14 @@ import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { appReducer } from './Redux/reducers';
 import {BrowserRouter as Router} from "react-router-dom";
+import createHistory from "history/createBrowserHistory";
+const history = createHistory();
 
 export const store = createStore(appReducer, composeWithDevTools());
 ReactDOM.render(
     <Provider store={store}>
         <Router>
-            <App/>
+            <App history={history}/>
         </Router>
     </Provider>,
     document.getElementById('root')

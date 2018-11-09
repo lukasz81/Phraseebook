@@ -1,16 +1,18 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchTrackersAction} from './fetchNotificationsActions';
+import {fetchNotificationsAction, markAsReadActions} from './fetchNotificationsActions';
 import './NotificationsList.css';
 
 export class NotificationsList extends Component {
 
     componentWillMount() {
         // Load content if not in store.
-        if (!this.props.notifications) this.props.fetchTrackersAction()
+        if (!this.props.notifications) this.props.fetchNotificationsAction();
+        this.props.markAsRead();
+
     }
 
-    trackerClickHandler(event, id) {
+    notificationClickHandler(event, id) {
         event.preventDefault();
         this.props.history.push('/notification/' + id)
     }
@@ -30,7 +32,6 @@ export class NotificationsList extends Component {
             </span>;
         const singleActionCopy =
             <span className={'two-line-text'}>
-                {console.log(names[0] === " ")}
                 <b>{names.length && !notificationTypeIsLike ? names : 'User'}</b> {action} your post: "{notification.post.title}."
             </span>;
         return source.length > 1 ? multipleActionCopy : singleActionCopy;
@@ -41,7 +42,7 @@ export class NotificationsList extends Component {
         return notifications.map((notification, index) => {
                 return (
                         <li
-                            onClick={event => this.trackerClickHandler(event, notification.post.id)}
+                            onClick={event => this.notificationClickHandler(event, notification.post.id)}
                             className={'flex-container notification-container'}
                             key={index}>
                             <img style={{width:'50px'}} className={'profile-picture'} src={'/img-placement.jpg'}
@@ -71,8 +72,11 @@ export class NotificationsList extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchTrackersAction: () => {
-            fetchTrackersAction(dispatch)
+        fetchNotificationsAction: () => {
+            fetchNotificationsAction(dispatch)
+        },
+        markAsRead: () => {
+            markAsReadActions(dispatch)
         }
     }
 };

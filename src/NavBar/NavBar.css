@@ -1,4 +1,45 @@
 nav {
   background-color: #FE5000;
-  min-height: 64px;
+  min-height: 60px;
   color: #FFFFFF; }
+
+nav svg {
+  margin: auto; }
+
+nav .notification-wrapper {
+  width: 100%;
+  cursor: pointer; }
+
+nav .notifications-count {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: white;
+  color: #fe5000;
+  text-align: center;
+  border-radius: 50px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  line-height: 20px;
+  font-weight: 600;
+  border: 2px solid;
+  font-size: 12px;
+  transition: all 0.2s ease-in-out; }
+
+nav .notification-actions {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; }
+
+nav .notification-actions:hover, nav .notification-actions.active {
+  background: white; }
+
+nav .notification-actions:hover svg, nav .notification-actions.active svg {
+  fill: #FE5000; }
+
+nav .notification-actions:hover .notifications-count, nav .notification-actions.active .notifications-count {
+  color: white;
+  background: #FE5000; }

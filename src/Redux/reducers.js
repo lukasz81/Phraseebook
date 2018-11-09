@@ -1,17 +1,25 @@
 import {
     FETCH_REQUEST,
     FETCH_FAIL,
-    FETCH_SUCCESS
+    FETCH_SUCCESS,
+    IS_READ
 } from './actionTypes';
 
 const initialState = {
     isLoggedIn: true,
-    notifications: null
+    notifications: null,
+    isNotificationRead: null
 };
 
 export function appReducer(state = initialState, action) {
 
     switch (action.type) {
+        //Mark as read
+        case IS_READ:
+            return {
+                ...state,
+                isNotificationRead: action.isNotificationRead
+            };
         //Fetching Notifications
         case FETCH_REQUEST:
             return {
