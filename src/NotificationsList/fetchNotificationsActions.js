@@ -1,5 +1,5 @@
 import * as actionTypes from '../Redux/actionTypes';
-const URL = 'http://www.mocky.io/v2/5b4315f12e00004c002230c3'
+const URL = 'http://www.mocky.io/v2/5b4315f12e00004c002230c3';
 export const fetchTrackersAction = (dispatch) => {
 
     fetch(URL)

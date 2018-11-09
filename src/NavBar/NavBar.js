@@ -3,10 +3,9 @@ import './NavBar.css';
 
 const NavBar = (props) => {
     return (
-        <nav>
-            <div className={'max-width--700'}>
-                <p>Phrasebook</p>
-
+        <nav className={'flex-container'}>
+            <div className={'default-padding'}>
+                <b>Phrasebook</b>
             </div>
         </nav>
     );
