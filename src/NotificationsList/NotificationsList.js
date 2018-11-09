@@ -41,14 +41,16 @@ export class NotificationsList extends Component {
     createListOfNotifications(notifications) {
         return notifications.map((notification, index) => {
                 return (
-                        <li
-                            onClick={event => this.notificationClickHandler(event, notification.post.id)}
-                            className={'flex-container notification-container'}
-                            key={index}>
-                            <img style={{width:'50px'}} className={'profile-picture'} src={'/img-placement.jpg'}
+                    <li
+                        onClick={event => this.notificationClickHandler(event, notification.post.id)}
+                        className={'flex-container notification-container'}
+                        key={index}>
+                        <figure style={{width: '50px'}}>
+                            <img style={{width: '50px'}} className={'profile-picture'} src={'/img-placement.jpg'}
                                  alt={'Profile picture for ' + notification.type}/>
-                            {this.createCopyForNotifications(notification)}
-                        </li>
+                        </figure>
+                        {this.createCopyForNotifications(notification)}
+                    </li>
                 )
             }
         )
@@ -59,9 +61,9 @@ export class NotificationsList extends Component {
         return (
             <div className={'default-padding'}>
                 {notifications ?
-                        <ul>
-                            {this.createListOfNotifications(notifications)}
-                        </ul>
+                    <ul>
+                        {this.createListOfNotifications(notifications)}
+                    </ul>
                     :
                     <p>Loading notifications ...</p>
                 }
