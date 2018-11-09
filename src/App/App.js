@@ -17,8 +17,9 @@ export class App extends Component {
                 <NavBar/>
                 {isLoggedIn ? (
                     <Switch>
-                        <Route history={history} exact path="/" component={NotificationsList}/>
-                        <Route path='/notification/:id' render={(props) => {return <p>Notification content for post: {props.match.params.id}</p>}}/>
+                        <Route history={history} exact path="/notifications" component={NotificationsList}/>
+                        <Route history={history} exact path="/notifications" component={NotificationsList}/>
+                        <Route path='/notification/:id' render={(props) => {return <p className={'default-padding'}>Notification content for post: {props.match.params.id}</p>}}/>
                     </Switch>
                 ) : (<p>Login page</p>)}
             </div>

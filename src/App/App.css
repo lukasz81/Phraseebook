@@ -31,7 +31,14 @@ body ul {
 
 body ul li {
   box-shadow: 0 1px 0 0 #ddd;
-  padding: 10px 0; }
+  padding: 10px 0;
+  transition: all 0.2s ease-in-out; }
+
+body ul li.notification-container {
+  cursor: pointer; }
+
+body ul li.notification-container:hover {
+  color: #333; }
 
 body ul li.notification-container .two-line-text {
   overflow: hidden;
