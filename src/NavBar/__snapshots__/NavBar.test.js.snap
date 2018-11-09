@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests button component should render correctly 1`] = `
+<nav
+  className="flex-container"
+>
+  <div
+    className="flex-container flex-row notification-wrapper"
+  >
+    <div
+      className="default-padding button-1"
+      onClick={[Function]}
+    >
+      <b>
+        Phrasebook
+      </b>
+    </div>
+    <div
+      className="notification-actions flex-container"
+      onClick={[Function]}
+    >
+      <MdNotifications
+        size={30}
+      />
+    </div>
+  </div>
+</nav>
+`;

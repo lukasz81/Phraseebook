@@ -16,11 +16,10 @@ export class App extends Component {
     }
 
     render() {
-        const {isLoggedIn,history} = this.props;
+        const {history} = this.props;
         return (
             <div className="App">
                 <NavBar history={history} props={this.props}/>
-                {isLoggedIn ? (
                     <Switch>
                         <Route history={history} exact path="/" render={() => {
                             return (
@@ -39,7 +38,6 @@ export class App extends Component {
                                 </div>
                             )}}/>
                     </Switch>
-                ) : (<p>Login page</p>)}
             </div>
         );
     }
@@ -47,7 +45,6 @@ export class App extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        isLoggedIn: state.isLoggedIn,
         isWaiting: state.isWaiting,
         notifications: state.notifications,
         isNotificationRead: state.isNotificationRead

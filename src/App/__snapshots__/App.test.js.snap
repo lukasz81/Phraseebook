@@ -4,6 +4,28 @@ exports[`Tests button component should render correctly 1`] = `
 <div
   className="App"
 >
-  <withAuth(Connect(Login)) />
+  <withRouter(NavBar)
+    props={
+      Object {
+        "fetchNotificationsAction": [Function],
+        "isLoggedIn": false,
+      }
+    }
+  />
+  <Switch>
+    <Route
+      exact={true}
+      path="/"
+      render={[Function]}
+    />
+    <Route
+      component={[Function]}
+      path="/notifications"
+    />
+    <Route
+      path="/notification/:id"
+      render={[Function]}
+    />
+  </Switch>
 </div>
 `;

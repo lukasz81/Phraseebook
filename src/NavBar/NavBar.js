@@ -18,12 +18,12 @@ const NavBar = (props) => {
     return (
         <nav className={'flex-container'}>
             <div className={'flex-container flex-row notification-wrapper'}>
-                <div onClick={() => goHomeHandler()} className={'default-padding'}>
+                <div onClick={() => goHomeHandler()} className={'default-padding button-1'}>
                     <b>Phrasebook</b>
                 </div>
                 <div className={notificationsPath ? 'notification-actions flex-container active' : 'notification-actions flex-container' } onClick={() => onClickHandler()}>
                     <MdNotifications size={30}/>
-                    {!props.props.isNotificationRead && <span className={'notifications-count'}>{props.props.notifications ? props.props.notifications.length : null}</span>}
+                    {(!props.props.isNotificationRead && props.props.notifications) && <span className={'notifications-count'}>{props.props.notifications ? props.props.notifications.length : '...'}</span>}
                 </div>
             </div>
         </nav>

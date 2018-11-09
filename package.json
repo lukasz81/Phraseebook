@@ -21,9 +21,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "build-css": "node-sass src/ -o src/",
-    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive"
   },
   "jest": {
     "snapshotSerializers": [
@@ -40,10 +38,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@storybook/addon-actions": "^3.4.11",
-    "@storybook/addon-links": "^3.4.11",
-    "@storybook/addons": "^3.4.11",
-    "@storybook/react": "^3.4.11",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "enzyme": "^3.7.0",
