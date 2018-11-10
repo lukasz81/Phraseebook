@@ -28,7 +28,7 @@ nav {
     font-weight: 600;
     border: 2px solid;
     font-size: 12px;
-    transition: all 0.2s ease-in-out;
+    //transition: all 0.2s ease-in-out;
   }
   .notification-actions {
     width: $navSize;
@@ -36,6 +36,7 @@ nav {
     position: relative;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
+    justify-content: space-between;
     &:hover, &.active {
       background: white;
       svg {

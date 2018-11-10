@@ -6,13 +6,14 @@
   align-items: center;
   justify-content: flex-start;
 }
-.flex-row {
-  flex-direction: row;
+//.flex-row {
+//  flex-direction: row;
+//}
+.space-between {
+  justify-content: space-between;
 }
 .default-padding {
   padding: 10px;
-  //max-width: 800px;
-  //margin: auto;
 }
 
 svg {
@@ -28,6 +29,7 @@ body {
   color: $body-text-color;
   p{
     margin:0;
+    line-height: 1.5;
   }
   .profile-picture {
     display: block;

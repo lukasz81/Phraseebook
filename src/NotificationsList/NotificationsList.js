@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchNotificationsAction, markAsReadActions} from './fetchNotificationsActions';
+import {fetchNotificationsAction, markAsReadActions} from './notificationsActions';
 import './NotificationsList.css';
 
 export class NotificationsList extends Component {
@@ -8,9 +8,12 @@ export class NotificationsList extends Component {
     componentWillMount() {
         // Load content if not in store.
         if (!this.props.notifications) this.props.fetchNotificationsAction();
-        this.props.markAsRead();
-
+        if (this.props.notifications) this.props.markAsRead();
     }
+
+    // componentWillReceiveProps() {
+    //     if (this.props.notifications) this.props.markAsRead();
+    // }
 
     notificationClickHandler(event, id) {
         event.preventDefault();

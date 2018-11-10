@@ -17,7 +17,7 @@ const NavBar = (props) => {
 
     return (
         <nav className={'flex-container'}>
-            <div className={'flex-container flex-row notification-wrapper'}>
+            <div className={'flex-container space-between notification-wrapper'}>
                 <div onClick={() => goHomeHandler()} className={'default-padding button-1'}>
                     <b>Phrasebook</b>
                 </div>
