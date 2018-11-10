@@ -16,7 +16,6 @@ export function appReducer(state = initialState, action) {
     switch (action.type) {
         //Mark as read
         case IS_READ:
-            console.log(action);
             return {
                 ...state,
                 isNotificationRead: action.isNotificationRead,
