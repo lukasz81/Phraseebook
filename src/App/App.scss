@@ -50,23 +50,4 @@ body {
     margin-right: 10px;
     border-radius: 2px;
   }
-  ul {
-    list-style-type: none;
-    margin:0;
-    padding:0;
-    li {
-      box-shadow: 0 1px 0 0 #ddd;
-      padding: 10px 0;
-      transition: all 0.2s ease-in-out;
-      &.notification-container {
-        cursor: pointer;
-        &:hover {
-          color: $main-color-hover
-        }
-        .two-line-text {
-          @include multiLineEllipsis($lineHeight: 1.2em, $lineCount: 2, $bgColor: white);
-        }
-      }
-    }
-  }
 }

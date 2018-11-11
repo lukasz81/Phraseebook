@@ -1,4 +1,50 @@
+@import "../variables.scss";
+
 figure {
   margin: 0 10px 0 0;
   padding: 0;
+}
+.notifications-list {
+  ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    li {
+      box-shadow: 0 1px 0 0 #ddd;
+      padding: 10px 0;
+      transition: all 0.2s ease-in-out;
+      &.notification-container {
+        cursor: pointer;
+        &:hover {
+          color: $main-color-hover
+        }
+        .text-container {
+          position: relative;
+          display: block;
+          color: #838485;
+          height: calc(2em + 5px);
+          overflow: hidden;
+          white-space: normal;
+        }
+        .text-content {
+          word-break: break-all;
+          position: relative;
+          display: block;
+          max-height: 3em;
+        }
+        .ellipsis {
+          position: absolute;
+          right: 1px;
+          top: calc(4em + 2px - 100%);
+          text-align: left;
+          padding-left: 35px;
+          background: linear-gradient(to right, #ffffff00, white 65%);
+        }
+        // text-container gets a fixed height which acts as a viewport. Give it a few extra pixels since characters that extend below the word-line will appear cut off. (2em in this example with 5px extra)
+        // text-content needs a maximum height which should be 1 line height greater than the viewport (3em in this example)
+        // ellipsis needs to move inversely with the height of the text-node. So it is offset out of bounds of the viewport initially and then as the content grows, it moves up and will stop moving up when text-content hits its max-height. (Top starts at 1 height below the viewport bottom. Final position is at 1em.)
+        // A CODE PEN BY Michael Chen
+      }
+    }
+  }
 }

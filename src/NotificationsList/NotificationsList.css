@@ -1,3 +1,41 @@
 figure {
   margin: 0 10px 0 0;
   padding: 0; }
+
+.notifications-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.notifications-list ul li {
+  box-shadow: 0 1px 0 0 #ddd;
+  padding: 10px 0;
+  transition: all 0.2s ease-in-out; }
+
+.notifications-list ul li.notification-container {
+  cursor: pointer; }
+
+.notifications-list ul li.notification-container:hover {
+  color: #333; }
+
+.notifications-list ul li.notification-container .text-container {
+  position: relative;
+  display: block;
+  color: #838485;
+  height: calc(2em + 5px);
+  overflow: hidden;
+  white-space: normal; }
+
+.notifications-list ul li.notification-container .text-content {
+  word-break: break-all;
+  position: relative;
+  display: block;
+  max-height: 3em; }
+
+.notifications-list ul li.notification-container .ellipsis {
+  position: absolute;
+  right: 1px;
+  top: calc(4em + 2px - 100%);
+  text-align: left;
+  padding-left: 35px;
+  background: linear-gradient(to right, #ffffff00, white 65%); }

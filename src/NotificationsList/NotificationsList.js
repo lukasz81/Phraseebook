@@ -26,13 +26,19 @@ export class NotificationsList extends Component {
         const trimmedBase = `${names}`.replace(/([,\s]+$)/g, '');
         const action = notificationTypeIsLike ? 'liked' : 'commented on';
         const multipleActionCopy =
-            <span className={'two-line-tex'}>
+            <div className="text-container">
+            <span className={'two-line-tex text-content'}>
                 <b>{trimmedBase} and {source.length - maxNames} others</b> {action} your post: "{notification.post.title}."
-            </span>;
+            <div className="ellipsis">...</div>
+            </span>
+            </div>;
         const singleActionCopy =
-            <span className={'two-line-tex'}>
+            <div className="text-container">
+            <span className={'two-line-tex text-content'}>
                 <b>{names.length && !notificationTypeIsLike ? names : 'User'}</b> {action} your post: "{notification.post.title}."
-            </span>;
+            <div className="ellipsis">...</div>
+            </span>
+            </div>;
         return source.length > 1 ? multipleActionCopy : singleActionCopy;
 
     }

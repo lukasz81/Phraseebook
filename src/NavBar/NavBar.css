@@ -30,8 +30,7 @@ nav .notifications-count {
   line-height: 20px;
   font-weight: 600;
   border: 2px solid;
-  font-size: 12px;
-  box-shadow: 0 0 6px 4px #00000017; }
+  font-size: 12px; }
 
 nav .notification-actions {
   width: 60px;
