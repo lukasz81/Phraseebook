@@ -12,7 +12,7 @@ export class App extends Component {
 
     componentWillMount() {
         // Load content if not in store.
-        if (!this.props.notifications) this.props.fetchNotificationsAction()
+        if (!this.props.notifications.length) this.props.fetchNotificationsAction()
     }
 
     render() {
@@ -20,6 +20,7 @@ export class App extends Component {
         return (
             <div className="App">
                 <NavBar history={history} props={this.props}/>
+                <main className={'full-height bg-white default-width'}>
                     <Switch>
                         <Route history={history} exact path="/" render={() => {
                             return (
@@ -38,6 +39,7 @@ export class App extends Component {
                                 </div>
                             )}}/>
                     </Switch>
+                </main>
             </div>
         );
     }
@@ -46,8 +48,7 @@ export class App extends Component {
 const mapStateToProps = (state) => {
     return {
         isWaiting: state.isWaiting,
-        notifications: state.notifications,
-        isNotificationRead: state.isNotificationRead
+        notifications: state.notifications
     }
 };
 

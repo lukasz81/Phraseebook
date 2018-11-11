@@ -7,8 +7,7 @@ import {
 
 const initialState = {
     isLoggedIn: true,
-    notifications: null,
-    isNotificationRead: null
+    notifications: []
 };
 
 export function appReducer(state = initialState, action) {
@@ -18,7 +17,6 @@ export function appReducer(state = initialState, action) {
         case IS_READ:
             return {
                 ...state,
-                isNotificationRead: action.isNotificationRead,
                 notifications: state.notifications.map(notification => {
                     return {
                         ...notification,

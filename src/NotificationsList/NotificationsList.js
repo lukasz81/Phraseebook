@@ -11,10 +11,6 @@ export class NotificationsList extends Component {
         if (this.props.notifications) this.props.markAsRead();
     }
 
-    // componentWillReceiveProps() {
-    //     if (this.props.notifications) this.props.markAsRead();
-    // }
-
     notificationClickHandler(event, id) {
         event.preventDefault();
         this.props.history.push('/notification/' + id)
@@ -30,11 +26,11 @@ export class NotificationsList extends Component {
         const trimmedBase = `${names}`.replace(/([,\s]+$)/g, '');
         const action = notificationTypeIsLike ? 'liked' : 'commented on';
         const multipleActionCopy =
-            <span className={'two-line-text'}>
+            <span className={'two-line-tex'}>
                 <b>{trimmedBase} and {source.length - maxNames} others</b> {action} your post: "{notification.post.title}."
             </span>;
         const singleActionCopy =
-            <span className={'two-line-text'}>
+            <span className={'two-line-tex'}>
                 <b>{names.length && !notificationTypeIsLike ? names : 'User'}</b> {action} your post: "{notification.post.title}."
             </span>;
         return source.length > 1 ? multipleActionCopy : singleActionCopy;

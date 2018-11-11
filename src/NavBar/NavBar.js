@@ -5,7 +5,7 @@ import {withRouter} from 'react-router-dom';
 
 const NavBar = (props) => {
 
-    const notificationsPath = props.location.pathname === '/notifications';
+    const isNotificationsPath = props.location.pathname === '/notifications';
 
     const onClickHandler = () => {
         props.history.push('/notifications')
@@ -15,15 +15,24 @@ const NavBar = (props) => {
         props.history.push('/')
     };
 
+    const areAllNotificationsRead = () => {
+        const notifications = props.props.notifications;
+        return notifications.reduce(
+            (accumulator, currentValue) => {
+                return currentValue && currentValue.isRead
+            },false
+        );
+    };
+
     return (
         <nav className={'flex-container'}>
-            <div className={'flex-container space-between notification-wrapper'}>
+            <div className={'flex-container space-between default-width notification-wrapper'}>
                 <div onClick={() => goHomeHandler()} className={'default-padding button-1'}>
                     <b>Phrasebook</b>
                 </div>
-                <div className={notificationsPath ? 'notification-actions flex-container active' : 'notification-actions flex-container' } onClick={() => onClickHandler()}>
+                <div className={isNotificationsPath ? 'notification-actions flex-container active' : 'notification-actions flex-container' } onClick={() => onClickHandler()}>
                     <MdNotifications size={30}/>
-                    {(!props.props.isNotificationRead && props.props.notifications) && <span className={'notifications-count'}>{props.props.notifications ? props.props.notifications.length : '...'}</span>}
+                    {(!areAllNotificationsRead() && !isNotificationsPath) && <span className={'notifications-count'}>{props.props.notifications.length}</span>}
                 </div>
             </div>
         </nav>

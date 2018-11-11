@@ -1,3 +1,9 @@
+@media only screen and (min-width: 700px) {
+  .notification-wrapper {
+    background: #0000000f; }
+  .notifications-count {
+    border: 2px solid #0000000f; } }
+
 nav {
   background-color: #FE5000;
   min-height: 60px;
@@ -24,7 +30,8 @@ nav .notifications-count {
   line-height: 20px;
   font-weight: 600;
   border: 2px solid;
-  font-size: 12px; }
+  font-size: 12px;
+  box-shadow: 0 0 6px 4px #00000017; }
 
 nav .notification-actions {
   width: 60px;

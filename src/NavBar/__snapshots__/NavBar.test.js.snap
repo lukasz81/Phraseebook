@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tests button component should render correctly 1`] = `
+exports[`Tests NavBar component should render correctly 1`] = `
 <nav
   className="flex-container"
 >
   <div
-    className="flex-container flex-row notification-wrapper"
+    className="flex-container space-between default-width notification-wrapper"
   >
     <div
       className="default-padding button-1"
@@ -22,6 +22,11 @@ exports[`Tests button component should render correctly 1`] = `
       <MdNotifications
         size={30}
       />
+      <span
+        className="notifications-count"
+      >
+        2
+      </span>
     </div>
   </div>
 </nav>

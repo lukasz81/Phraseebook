@@ -4,7 +4,7 @@ import React from 'react';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({adapter: new Adapter()});
 
-describe('Tests button component',() => {
+describe('Tests NavBar component', () => {
 
     let historyMock;
     let mock = jest.fn();
@@ -15,10 +15,10 @@ describe('Tests button component',() => {
             <NavBar.WrappedComponent
                 location={{pathname: '/'}}
                 history={historyMock}
-                props={{props:{
+                props={{
                         isNotificationRead: isNotificationRead,
-                        notifications: ['6']
-                    }}}
+                        notifications: [{isRead:false},{isRead:false}]
+                    }}
             />
         )
     };

@@ -9,6 +9,17 @@
 .default-padding {
   padding: 10px; }
 
+.bg-white {
+  background: white; }
+
+.full-height {
+  height: 100vh; }
+
+.default-width {
+  max-width: 700px;
+  position: relative;
+  margin: auto; }
+
 svg {
   vertical-align: top; }
 
@@ -18,55 +29,47 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #777; }
-
-body p {
-  margin: 0;
-  line-height: 1.5; }
-
-body .profile-picture {
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  border-radius: 2px; }
-
-body ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-body ul li {
-  box-shadow: 0 1px 0 0 #ddd;
-  padding: 10px 0;
-  transition: all 0.2s ease-in-out; }
-
-body ul li.notification-container {
-  cursor: pointer; }
-
-body ul li.notification-container:hover {
-  color: #333; }
-
-body ul li.notification-container .two-line-text {
-  overflow: hidden;
-  position: relative;
-  line-height: 1.2em;
-  max-height: 2.4em;
-  text-align: left;
-  margin-right: -1em;
-  padding-right: 1em; }
-
-body ul li.notification-container .two-line-text:before {
-  content: '...';
-  position: absolute;
-  right: 0;
-  bottom: 0; }
-
-body ul li.notification-container .two-line-text:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  width: 1em;
-  height: 1em;
-  margin-top: 0.2em;
-  background: white; }
+  color: #777;
+  background: #f3f3f3; }
+  body p {
+    margin: 0;
+    line-height: 1.5; }
+  body .profile-picture {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 2px; }
+  body ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    body ul li {
+      box-shadow: 0 1px 0 0 #ddd;
+      padding: 10px 0;
+      transition: all 0.2s ease-in-out; }
+      body ul li.notification-container {
+        cursor: pointer; }
+        body ul li.notification-container:hover {
+          color: #333; }
+        body ul li.notification-container .two-line-text {
+          overflow: hidden;
+          position: relative;
+          line-height: 1.2em;
+          max-height: 2.4em;
+          text-align: left;
+          margin-right: -1em;
+          padding-right: 1em; }
+          body ul li.notification-container .two-line-text:before {
+            content: '...';
+            position: absolute;
+            right: 0;
+            bottom: 0; }
+          body ul li.notification-container .two-line-text:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 1em;
+            height: 1em;
+            margin-top: 0.2em;
+            background: white; }
