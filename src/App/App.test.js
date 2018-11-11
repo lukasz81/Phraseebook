@@ -11,6 +11,7 @@ describe('Tests button component',() => {
             <App
                 fetchNotificationsAction={() => {}}
                 isLoggedIn={loggedIn}
+                notifications={[]}
             />
         )
     };

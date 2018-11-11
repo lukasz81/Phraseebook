@@ -9,23 +9,28 @@ exports[`Tests button component should render correctly 1`] = `
       Object {
         "fetchNotificationsAction": [Function],
         "isLoggedIn": false,
+        "notifications": Array [],
       }
     }
   />
-  <Switch>
-    <Route
-      exact={true}
-      path="/"
-      render={[Function]}
-    />
-    <Route
-      component={[Function]}
-      path="/notifications"
-    />
-    <Route
-      path="/notification/:id"
-      render={[Function]}
-    />
-  </Switch>
+  <main
+    className="full-height bg-white default-width"
+  >
+    <Switch>
+      <Route
+        exact={true}
+        path="/"
+        render={[Function]}
+      />
+      <Route
+        component={[Function]}
+        path="/notifications"
+      />
+      <Route
+        path="/notification/:id"
+        render={[Function]}
+      />
+    </Switch>
+  </main>
 </div>
 `;

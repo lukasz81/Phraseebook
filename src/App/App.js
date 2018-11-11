@@ -15,6 +15,15 @@ export class App extends Component {
         if (!this.props.notifications.length) this.props.fetchNotificationsAction()
     }
 
+    contentForDetailsPage(props) {
+        return (
+            <div className={'default-padding'}>
+                <h3><MdNotifications size={20}/> Notification</h3>
+                <p>Notification content for post: {props.match.params.id}</p>
+            </div>
+        )
+    };
+
     render() {
         const {history} = this.props;
         return (
@@ -31,13 +40,7 @@ export class App extends Component {
                             )
                         }}/>
                         <Route history={history} path="/notifications" component={NotificationsList}/>
-                        <Route history={history} path='/notification/:id' render={(props) => {
-                            return (
-                                <div className={'default-padding'}>
-                                    <h3><MdNotifications size={20}/> Notification</h3>
-                                    <p>Notification content for post: {props.match.params.id}</p>
-                                </div>
-                            )}}/>
+                        <Route history={history} path='/notification/:id' render={ props => this.contentForDetailsPage(props)}/>
                     </Switch>
                 </main>
             </div>
