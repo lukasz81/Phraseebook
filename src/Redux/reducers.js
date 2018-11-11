@@ -6,7 +6,6 @@ import {
 } from './actionTypes';
 
 const initialState = {
-    isLoggedIn: true,
     notifications: []
 };
 
