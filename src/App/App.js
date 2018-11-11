@@ -24,6 +24,15 @@ export class App extends Component {
         )
     };
 
+    contentForHomePage(props) {
+        return (
+            <div className={'default-padding'}>
+                <h3><MdHome size={20}/> Home</h3>
+                <p>{lorem}</p>
+            </div>
+        )
+    };
+
     render() {
         const {history} = this.props;
         return (
@@ -31,14 +40,7 @@ export class App extends Component {
                 <NavBar history={history} props={this.props}/>
                 <main className={'full-height bg-white default-width'}>
                     <Switch>
-                        <Route history={history} exact path="/" render={() => {
-                            return (
-                                <div className={'default-padding'}>
-                                    <h3><MdHome size={20}/> Home</h3>
-                                    <p>{lorem}</p>
-                                </div>
-                            )
-                        }}/>
+                        <Route history={history} exact path="/" render={props => this.contentForHomePage(props)}/>
                         <Route history={history} path="/notifications" component={NotificationsList}/>
                         <Route history={history} path='/notification/:id' render={ props => this.contentForDetailsPage(props)}/>
                     </Switch>
