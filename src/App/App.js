@@ -17,7 +17,7 @@ export class App extends Component {
 
     contentForDetailsPage(props) {
         return (
-            <div className={'default-padding'}>
+            <div className={'default-padding details-page'}>
                 <h3><MdNotifications size={20}/> Notification</h3>
                 <p>Notification content for post: {props.match.params.id}</p>
             </div>
@@ -26,7 +26,7 @@ export class App extends Component {
 
     contentForHomePage() {
         return (
-            <div className={'default-padding'}>
+            <div className={'default-padding home-page'}>
                 <h3><MdHome size={20}/> Home</h3>
                 <p>{lorem}</p>
             </div>

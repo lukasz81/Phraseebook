@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tests button component should render correctly 1`] = `
+exports[`Tests App component should render correctly 1`] = `
 <div
   className="App"
 >
@@ -8,7 +8,6 @@ exports[`Tests button component should render correctly 1`] = `
     props={
       Object {
         "fetchNotificationsAction": [Function],
-        "isLoggedIn": false,
         "notifications": Array [],
       }
     }

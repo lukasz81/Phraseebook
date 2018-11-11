@@ -58,7 +58,7 @@ export class NotificationsList extends Component {
     render() {
         const notifications = this.props.notifications;
         return (
-            <div className={'default-padding'}>
+            <div className={'default-padding notifications-list'}>
                 {notifications ?
                     <ul>
                         {this.createListOfNotifications(notifications)}
