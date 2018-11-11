@@ -10,14 +10,13 @@ describe('Tests NavBar component', () => {
     let mock = jest.fn();
     historyMock = { push: mock };
 
-    const makeComponent = (isNotificationRead = false) => {
+    const makeComponent = (isRead = false) => {
         return shallow(
             <NavBar.WrappedComponent
                 location={{pathname: '/'}}
                 history={historyMock}
                 props={{
-                        isNotificationRead: isNotificationRead,
-                        notifications: [{isRead:false},{isRead:false}]
+                        notifications: [{isRead:isRead},{isRead:isRead}]
                     }}
             />
         )
