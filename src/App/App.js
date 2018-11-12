@@ -16,7 +16,6 @@ export class App extends Component {
     }
 
     contentForDetailsPage(props) {
-        console.log(props);
         return (
             <div className={'default-padding details-page'}>
                 <h3><MdNotifications size={20}/> Notification</h3>
