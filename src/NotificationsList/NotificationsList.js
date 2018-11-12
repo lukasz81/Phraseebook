@@ -13,7 +13,7 @@ export class NotificationsList extends Component {
 
     notificationClickHandler(event, id) {
         event.preventDefault();
-        this.props.history.push('/notification/' + id)
+        this.props.history.push('/notification/' + id);
     }
 
     createCopyForNotifications(notification) {
@@ -27,17 +27,17 @@ export class NotificationsList extends Component {
         const action = notificationTypeIsLike ? 'liked' : 'commented on';
         const multipleActionCopy =
             <div className="text-container">
-            <span className={'two-line-tex text-content'}>
-                <b>{trimmedBase} and {source.length - maxNames} others</b> {action} your post: "{notification.post.title}."
-            <div className="ellipsis">...</div>
-            </span>
+                <span className={'two-line-tex text-content'}>
+                    <b>{trimmedBase} and {source.length - maxNames} others</b> {action} your post: "{notification.post.title}."
+                    <div className="ellipsis">...</div>
+                </span>
             </div>;
         const singleActionCopy =
             <div className="text-container">
-            <span className={'two-line-tex text-content'}>
-                <b>{names.length && !notificationTypeIsLike ? names : 'User'}</b> {action} your post: "{notification.post.title}."
-            <div className="ellipsis">...</div>
-            </span>
+                <span className={'two-line-tex text-content'}>
+                    <b>{names.length && !notificationTypeIsLike ? names : 'User'}</b> {action} your post: "{notification.post.title}."
+                    <div className="ellipsis">...</div>
+                </span>
             </div>;
         return source.length > 1 ? multipleActionCopy : singleActionCopy;
 

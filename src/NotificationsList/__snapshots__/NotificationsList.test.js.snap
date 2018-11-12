@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests notifications list component should render correctly 1`] = `
+<div
+  className="default-padding notifications-list"
+>
+  <ul>
+    <li
+      className="flex-container notification-container"
+      key="0"
+      onClick={[Function]}
+    >
+      <figure
+        style={
+          Object {
+            "width": "50px",
+          }
+        }
+      >
+        <img
+          alt="Profile picture for Like"
+          className="profile-picture"
+          src="/img-placement.jpg"
+          style={
+            Object {
+              "width": "50px",
+            }
+          }
+        />
+      </figure>
+      <div
+        className="text-container"
+      >
+        <span
+          className="two-line-tex text-content"
+        >
+          <b>
+             Mary T. Price, Suoma Narjus
+             and 
+            3
+             others
+          </b>
+           
+          liked
+           your post: "
+          Acme Inc dynamically scales niches worldwide
+          ."
+          <div
+            className="ellipsis"
+          >
+            ...
+          </div>
+        </span>
+      </div>
+    </li>
+    <li
+      className="flex-container notification-container"
+      key="1"
+      onClick={[Function]}
+    >
+      <figure
+        style={
+          Object {
+            "width": "50px",
+          }
+        }
+      >
+        <img
+          alt="Profile picture for Comment"
+          className="profile-picture"
+          src="/img-placement.jpg"
+          style={
+            Object {
+              "width": "50px",
+            }
+          }
+        />
+      </figure>
+      <div
+        className="text-container"
+      >
+        <span
+          className="two-line-tex text-content"
+        >
+          <b>
+             Suoma Narjus
+          </b>
+           
+          commented on
+           your post: "
+          Acme Inc dynamically scales niches worldwide
+          ."
+          <div
+            className="ellipsis"
+          >
+            ...
+          </div>
+        </span>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
