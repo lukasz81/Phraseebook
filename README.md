@@ -10,4 +10,4 @@ To run test:
 1) Run $npm test
 </br>
 There is know issue with NPM dependencies: https://github.com/facebook/create-react-app/issues/5259
-If you run into an error while npm test, please consider installing <a href="https://yarnpkg.com/en/docs/install#mac-stable">yearn</a> instead and run the commands via yarn rather then NPM. 
+If you run into an error while npm test, please consider installing <a href="https://yarnpkg.com/en/docs/install#mac-stable">yarn</a> instead and run the commands via yarn rather then NPM. 
